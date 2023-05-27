@@ -1,15 +1,17 @@
-import React from "react"
-
-const todo = ({ todo }) => {
+const todo = ({ todo, removeTodo, completeTodo }) => {
     return (
-    <div className="todo">
+    <div className="todo" style={{textDecoration: todo.isCompleted ? "line-through" : ""}}>
     <div className="content">
         <p>{todo.text}</p>
         <p className="category"> ({todo.category})</p>
     </div>
     <div>
-        <button className="Complete">Complete</button>
-        <button className="Remove">X</button>
+        <button className="Complete" onClick={() => completeTodo(todo.id)}>
+            Complete
+        </button>
+        <button className="Remove" onClick={() => removeTodo(todo.id)}>
+            X
+        </button>
     </div>
     </div>
     )

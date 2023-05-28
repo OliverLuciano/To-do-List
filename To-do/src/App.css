@@ -84,3 +84,20 @@ input, select {
   border-radius: 3px;
   width: 100%;
 }
+
+.Filter, .Search {
+  border-bottom: 1px solid #555;
+  margin-bottom: 20px;
+  padding-bottom:20px;
+
+}
+
+.Filter-options { 
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.Filter-options div {
+  flex: 1 1 0;
+}
